@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title> Site </title>
     <link rel="stylesheet" href="style.css"> <!--Conector do css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
   <nav>
     <div class="navbar"> <!--Classe da barra de navegação -->
-      <div class="logo"><a href="#">Evo Systems</a></div>
+      <div class="logo"><a href="#">Evo Pizzas</a></div>
       <ul class="nav-links">
         <li><a href="#">Principal</a></li>
         <li><a href="#">Sobre</a></li>
@@ -19,7 +18,6 @@
         <ul>
            <li>
               <a href="#">Filiais</a>
-              
            </li>
         </ul>
         </li> 
@@ -27,62 +25,86 @@
       </ul>
    </div>
   </nav>
+  
   <section class="home-content"> <!---->
     <div class="texts">
-      <h2 class="text">Bem-vindo(a) </h2>
+      <h2 class="text">Bem-vindo(a)</h2>
       <h3 class="text">esse é meu site, fique a vontade para explorar <span>meu nome é Pamela</span></h3>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi a fugit dolor nesciunt alias eius neque voluptatem exercitationem voluptas non accusantium, dolorem fugiat obcaecati. Culpa fugit qui sapiente! Ad, laudantium.</p>
       <div class="button">
-      <a href="#">Saiba Mais
+     
       <i class="fas fa-location-arrow"></i></a>
     </div>
-    <div>
       
+    <div class="slider">
+      <div class="slides">
+       
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        
+     
+       
+        <div class="slide first">
+          <img src="public/img/Img-1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="public/img/Img-2.jpeg" alt="">
+        </div>
+        <div class="slide">
+          <img src="public/img/Img-2.png" alt="">
+        </div>
+
+          
+        </div>
+        
+        
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+         
+        </div>
+        
+      </div>
+      
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+    
+      </div>
+     
     </div>
-  </section>
-  <div class="imagens"> 
-    <ul>
-      <li><img src="Img-1.jpg" alt=""></li> 
-        <li><img src="Img-2.jpeg" alt=""></li> 
-        <li><img src="Img-2.png" alt=""></li> 
-    </ul>
+  
+    </div>
   </div>
   <div class="tabela"> 
-  <table>
-      <tr>
-        <th>Sabor</th>
-        <th>6 Pedaços</th>
-        <th>8 Pedaços</th>
-        <th>Dias Validos</th>
-      </tr>
-      <tr>
-        <td>Mussarela</td>
-        <td>R$29,99</td>
-        <td>R$38,99</td>
-        <td>Seg a Dom</td>
-      </tr>
-      <tr>
-        <td>Calabresa</td>
-        <td>R$29,99</td>
-        <td>R$38,99</td>
-        <td>Ter a Dom</td>
-      </tr>
-      <tr>
-        <td>Portuguesa</td>
-        <td>R$29,99</td>
-        <td>R$38,99</td>
-        <td>Ter a Dom</td>
-      </tr>
-      <tr>
-        <td>Marguerita</td>
-        <td>R$31,99</td>
-        <td>R$39,99</td>
-        <td>Seg a Dom</td>
-      </tr>
+    <table class="initial-table">
     </table>
-  </div>  
+  </div>
 
+  <div class="forms">
+    <form action="">
+      <div class="form">
+        <label for="" class="form-label">Sabor:</label>
+        <input type="text" id="taste">
+      </div>
+      <div class="form">
+        <label for="" class="form-label">6 pedaços:</label>
+        <input type="text" id="six-parts">
+      </div>
+      <div class="form">
+        <label for="" class="form-label">8 pedaços:</label>
+        <input type="text" id="eight-parts">
+      </div>
+      <div class="form">
+        <label for="" class="form-label">Dias Validos:</label>
+        <input type="text" id="valid-days">
+      </div>
+      <button id="submit">Submit</button>
+    </form>
+  </div>
   <script src="script.js"></script>
-
 </body>
 </html>

@@ -1,110 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{ /*Alterações que servem para a pagina toda*/
-  margin: 0;  
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  /*Alterações que servem para a pagina toda*/
+  margin: 0;
   padding: 0; /*espaçamento ao redor de um elemento*/
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: all 0.3s ease; /*tempo de resposta dos elementos*/
 }
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 
- table,th,td{ /*config da parte de dentro tabela*/
-   width: 650px;
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 600px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #40d3dc;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+table,
+th,
+td {
+  /*config da parte de dentro tabela*/
+  width: 650px;
   border: 2px solid #f08181;
   border-collapse: collapse;
   align-items: center;
-
- 
 }
-td{
-text-align: center;
-
+td {
+  text-align: center;
 }
-.tabela{
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  background: #F0F8FF;
-  
-}
-.imagens{
+.tabela {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: #F0F8FF;
-  border: 0px;
+  background: #f0f8ff;
 }
-.imagens ul li{
-  list-style-type: none;
-  border: 0px;
-  
-}
-.imagens ul li:hover{
-  background: none;
-  
-}
-li{
+li {
   display: block;
   float: flex;
   padding: 18px;
   position: relative;
   text-decoration: none;
-  transition-duration:0.5s ;
-
+  transition-duration: 0.5s;
 }
-li:hover{
+li:hover {
   background: #f08181;
   cursor: pointer;
-
-} 
+}
 
 ul li ul {
-background-color: #f08181;
-visibility: hidden;
-opacity: 0;
-position: absolute;
-transition: all 0.5s ease;
-margin-top: 18px;
-left: 0;
-display: none;
-
-
+  background-color: #f08181;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 18px;
+  left: 0;
+  display: none;
 }
-ul li:hover > ul, ul li ul:hover{
-visibility: visible;
-opacity: 1;
-display: block;
-
-
-} 
-ul li ul li{
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+ul li ul li {
   clear: both;
   width: 100%;
-
-
 }
 
-.nav-links li ul{
-background-color: #f08181;
-visibility: hidden;
-opacity: 0;
-position: absolute;
-transition: all 0.5s ease;
-margin-top: 18px;
-display:none ;
-
-
+.nav-links li ul {
+  background-color: #f08181;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 18px;
+  display: none;
 }
-nav{
-  position: fixed;
+nav {
   z-index: 999;
   display: block;
   height: 70px;
   width: 100%;
   background: #e0644f;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-nav .navbar{
+nav .navbar {
   display: flex;
   align-items: center;
   height: 100%;
@@ -113,62 +168,61 @@ nav .navbar{
   padding: 0 30px;
   justify-content: space-between;
 }
-nav .navbar a{
+nav .navbar a {
   font-size: 30px;
   font-weight: 500;
   color: #fff;
   text-decoration: none;
 }
- .navbar .nav-links{
-   display: flex;
- }
- .navbar .nav-links li{
-   margin: 0 8px;
-   list-style: none;
-   display: flex;
- }
- .navbar .nav-links a{
-   font-size: 18px;
-   font-weight: 400;
-   opacity: 1;
- }
-  .navbar .nav-links a:hover{
-    opacity: 1;
-  }
- .navbar .appearance{
-   display: flex;
-   align-items: center;
- }
-.home-content{
-  height: 100vh;
+.navbar .nav-links {
+  display: flex;
+}
+.navbar .nav-links li {
+  margin: 0 8px;
+  list-style: none;
+  display: flex;
+}
+.navbar .nav-links a {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 1;
+}
+.navbar .nav-links a:hover {
+  opacity: 1;
+}
+.navbar .appearance {
+  display: flex;
+  align-items: center;
+}
+.home-content {
   width: 100%;
-  background: #F0F8FF;
+  background: #f0f8ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 60px;
 }
-.home-content h2{
+.home-content h2 {
   color: #24292d;
   font-size: 50px;
 }
-.home-content h3{
+.home-content h3 {
   color: #24292d;
   font-size: 42px;
   margin-top: -8px;
 }
-.home-content h3 span{
+.home-content h3 span {
   color: #e0644f;
 }
 
-.home-content p{
+.home-content p {
   color: #24292d;
   font-size: 16px;
   width: 45%;
   text-align: justify;
   margin: 4px 0 30px 0;
 }
-.home-content a{
+.home-content a {
   color: #fff;
   font-size: 20px;
   padding: 12px 24px;
@@ -176,11 +230,29 @@ nav .navbar a{
   text-decoration: none;
   background: #e0644f;
 }
-.home-content a i{
+.home-content a i {
   transform: rotate(45deg);
   font-size: 16px;
 }
-.home-content a:hover{
-  background: black
+.home-content a:hover {
+  background: black;
 }
 
+.forms {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.forms form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
