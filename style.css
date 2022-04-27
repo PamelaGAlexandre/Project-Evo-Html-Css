@@ -256,3 +256,24 @@ nav .navbar a {
   gap: 5px;
   justify-content: space-between;
 }
+
+
+.btns{
+  position: absolute;
+  top: 280px;
+  left: 550px;
+  display: flex;
+}
+
+.btn{
+  background: transparent;
+  border: none;
+  margin: 40px;
+  font-size: 40px;
+  outline: none;
+  color: black;
+}
+
+.btn i:hover{
+  cursor: pointer;
+}

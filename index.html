@@ -5,6 +5,7 @@
     <title> Site </title>
     <link rel="stylesheet" href="style.css"> <!--Conector do css -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
    </head>
 <body>
   <nav>
@@ -25,7 +26,9 @@
       </ul>
    </div>
   </nav>
-  
+  <div class="btns">
+    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fas fa-heart"></i></Button>   
+</div>
   <section class="home-content"> <!---->
     <div class="texts">
       <h2 class="text">Bem-vindo(a)</h2>
@@ -33,7 +36,6 @@
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi a fugit dolor nesciunt alias eius neque voluptatem exercitationem voluptas non accusantium, dolorem fugiat obcaecati. Culpa fugit qui sapiente! Ad, laudantium.</p>
       <div class="button">
      
-      <i class="fas fa-location-arrow"></i></a>
     </div>
       
     <div class="slider">
@@ -105,6 +107,19 @@
       <button id="submit">Submit</button>
     </form>
   </div>
+  <script>
+       var btnvar1 = document.getElementById('btnh1');
+
+       function Toggle1(){
+                if (btnvar1.style.color =="red") {
+                    btnvar1.style.color = "black"
+                }
+                else{
+                    btnvar1.style.color = "red"
+                }
+       }
+      </script>
+
   <script src="script.js"></script>
 </body>
 </html>
