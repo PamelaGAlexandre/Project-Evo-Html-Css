@@ -1,14 +1,14 @@
-const addValuesToTable = (object) => {
+const addValuesToTable = (object) => { //adiciona o objeto na tabela
   const initialTable = document.querySelector(".initial-table");
   object.forEach((i) => {
-    let tr = document.createElement("tr");
+    let tr = document.createElement("tr"); //crio o elemento TR
 
-    const cell1 = tr.insertCell(0);
+    const cell1 = tr.insertCell(0); //adiciono 4 células dentro do elemento tr
     const cell2 = tr.insertCell(1);
     const cell3 = tr.insertCell(2);
     const cell4 = tr.insertCell(3);
 
-    cell1.innerHTML = i.taste;
+    cell1.innerHTML = i.taste; // adiciono nas células os valores de dentro do objeto
     cell2.innerHTML = `R$${i.sixParts}`;
     cell3.innerHTML = `R$${i.eightParts}`;
     cell4.innerHTML = `${i.validDays}`;
@@ -17,49 +17,44 @@ const addValuesToTable = (object) => {
   });
 };
 
-let initialValues = [
-  {
-    taste: "Mussarela",
-    sixParts: "29,99",
-    eightParts: "38,99",
-    validDays: "Seg a Dom",
-  },
-  {
-    taste: "Calabresa",
-    sixParts: "29,99",
-    eightParts: "38,99",
-    validDays: "Ter a Dom",
-  },
-  {
-    taste: "Portuguesa",
-    sixParts: "29,99",
-    eightParts: "38,99",
-    validDays: "Ter a Dom",
-  },
-  {
-    taste: "Marguerita",
-    sixParts: "31,99",
-    eightParts: "39,99",
-    validDays: "Seg a Dom",
-  },
-];
-
 (function () {
-  const initialTable = document.querySelector(".initial-table");
-  let tr = document.createElement("tr");
+  const fixedValues = [
+    {
+    taste: "Sabor",
+    sixParts: "6 pedaços",
+    eightParts: "8 pedaços",
+    validDays: "Dias válidos",
+    }
+  ];
 
-  const cell1 = tr.insertCell(0);
-  const cell2 = tr.insertCell(1);
-  const cell3 = tr.insertCell(2);
-  const cell4 = tr.insertCell(3);
+  let initialValues = [
+    {
+      taste: "Mussarela",
+      sixParts: "29,99",
+      eightParts: "38,99",
+      validDays: "Seg a Dom",
+    },
+    {
+      taste: "Calabresa",
+      sixParts: "29,99",
+      eightParts: "38,99",
+      validDays: "Ter a Dom",
+    },
+    {
+      taste: "Portuguesa",
+      sixParts: "29,99",
+      eightParts: "38,99",
+      validDays: "Ter a Dom",
+    },
+    {
+      taste: "Marguerita",
+      sixParts: "31,99",
+      eightParts: "39,99",
+      validDays: "Seg a Dom",
+    },
+  ];
 
-  cell1.innerHTML = "Sabor";
-  cell2.innerHTML = "6 pedaços";
-  cell3.innerHTML = "8 pedaços";
-  cell4.innerHTML = "Dias válidos";
-
-  initialTable.appendChild(tr);
-
+  addValuesToTable(fixedValues);
   addValuesToTable(initialValues);
 })();
 
@@ -75,12 +70,3 @@ let initialValues = [
     addValuesToTable([{ taste, sixParts, eightParts, validDays }]);
   });
 })();
-
-var counter = 1;
-setInterval(function () {
-  document.getElementById("radio" + counter).checked = true;
-  counter++;
-  if (counter > 3) {
-    counter = 1;
-  }
-}, 5000);
