@@ -166,12 +166,6 @@ nav .navbar a {
   background: black;
 }
 
-.btns{
-  position: absolute;
-  top: 100px;
-  left: 500px;
-  display: flex;
-}
 .btn{
   background: transparent;
   border: none;
@@ -180,10 +174,19 @@ nav .navbar a {
   outline: none;
   color: rgb(0, 0, 0);
   }
-  .btn i:hover{
+.btn i:hover{
     cursor: pointer;
 }
 
-.carousel-inner {
-  width: 200% !important;
+.button {
+  display: flex;
+}
+
+.carousel {
+  width: 50% !important;
+  display: flex;
+}
+
+.fa-heart{
+  font-size: 30px;
 }
