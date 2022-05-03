@@ -9,15 +9,15 @@
 }
 .slider {
   width: 800px;
-  height: 500px;
+  height: 800px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
 }
 
 .slides {
-  width: 500%;
-  height: 500px;
+  width: 900%;
+  height: 1000px;
   display: flex;
 }
 
@@ -26,88 +26,16 @@
 }
 
 .slide {
-  width: 20%;
-  transition: 2s;
+  width: 25%;
+  
 }
 
 .slide img {
-  width: 600px;
-  height: 500px;
+  width: 200px;
+  height: 600px;
+  
 }
 
-/*css for manual slide navigation*/
-
-.navigation-manual {
-  position: absolute;
-  width: 800px;
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn {
-  border: 2px solid #40d3dc;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual-btn:hover {
-  background: #40d3dc;
-}
-
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-  margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-  margin-left: -40%;
-}
-
-/*css for automatic navigation*/
-
-.navigation-auto {
-  position: absolute;
-  display: flex;
-  width: 800px;
-  justify-content: center;
-  margin-top: 460px;
-}
-
-.navigation-auto div {
-  border: 2px solid #40d3dc;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
-}
-
-table,
-th,
-td {
-  /*config da parte de dentro tabela*/
-  width: 650px;
-  border: 2px solid #f08181;
-  border-collapse: collapse;
-  align-items: center;
-}
-td {
-  text-align: center;
-}
-.tabela {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f0f8ff;
-}
 li {
   display: block;
   float: flex;
@@ -156,7 +84,7 @@ nav {
   display: block;
   height: 70px;
   width: 100%;
-  background: #e0644f;
+  background: #000000;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 nav .navbar {
@@ -196,7 +124,7 @@ nav .navbar a {
 }
 .home-content {
   width: 100%;
-  background: #f0f8ff;
+  background: #ebf3f3;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,42 +166,24 @@ nav .navbar a {
   background: black;
 }
 
-.forms {
-  width: 100%;
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.forms form {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-
-.form {
-  display: flex;
-  gap: 5px;
-  justify-content: space-between;
-}
-
-
 .btns{
   position: absolute;
-  top: 280px;
-  left: 550px;
+  top: 100px;
+  left: 500px;
   display: flex;
 }
-
 .btn{
   background: transparent;
   border: none;
-  margin: 40px;
-  font-size: 40px;
+  font-size: px;
+  margin: 10px 0px;
   outline: none;
-  color: black;
+  color: rgb(0, 0, 0);
+  }
+  .btn i:hover{
+    cursor: pointer;
 }
 
-.btn i:hover{
-  cursor: pointer;
+.carousel-inner {
+  width: 200% !important;
 }

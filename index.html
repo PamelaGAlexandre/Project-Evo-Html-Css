@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title> Site </title>
     <link rel="stylesheet" href="style.css"> <!--Conector do css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
    </head>
@@ -26,100 +27,86 @@
       </ul>
    </div>
   </nav>
-  <div class="btns">
-    <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fas fa-heart"></i></Button>   
 </div>
   <section class="home-content"> <!---->
     <div class="texts">
-      <h2 class="text">Bem-vindo(a)</h2>
-      <h3 class="text">esse é meu site, fique a vontade para explorar <span>meu nome é Pamela</span></h3>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi a fugit dolor nesciunt alias eius neque voluptatem exercitationem voluptas non accusantium, dolorem fugiat obcaecati. Culpa fugit qui sapiente! Ad, laudantium.</p>
+      <h2 class="text">Bem-vindo</h2>
+      <h3 class="text">Somos da pizzaria Evo, fique a vontade para explorar </h3>
+      <p>Mais de 86 sabores de pizza, com massa fina ou grossa, diversas opções de borda, assadas no forno a lenha</p>
       <div class="button">
-     
-    </div>
-      
-    <div class="slider">
-      <div class="slides">
-       
-        <input type="radio" name="radio-btn" id="radio1">
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        
-     
-       
-        <div class="slide first">
-          <img src="public/img/Img-1.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="public/img/Img-2.jpeg" alt="">
-        </div>
-        <div class="slide">
-          <img src="public/img/Img-2.png" alt="">
-        </div>
 
-          
+
+
+
+        <div class="btns">
+          <Button onclick="Toggle1()" id="btnh1" class="btn"><i class="fas fa-heart"></i></Button>
+
+          <script>
+       
+               var btnvar1 = document.getElementById('btnh1');
+        
+               function Toggle1(){
+                        if (btnvar1.style.color =="red") {
+                            btnvar1.style.color = "grey"
+                        }
+                        else{
+                            btnvar1.style.color = "red"
+                        }
+               }
+
+
+              </script>
+
+    </div>  
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="public/img/Img-1.jpg" class="d-block w-100" alt="100">
+            </div>
+            <div class="carousel-item">
+              <img src="public/img/Img-2.jpeg" class="d-block w-100" alt="100">
+            </div>
+            <div class="carousel-item">
+              <img src="public/img/Img-2.png" class="d-block w-100" alt="100">
+            </div>
+          </div>
         </div>
-        
-        
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-         
-        </div>
-        
-      </div>
-      
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-    
-      </div>
-     
     </div>
   
     </div>
   </div>
-  <div class="tabela"> 
-    <table class="initial-table">
-    </table>
-  </div>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Pizzas</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Ingredientes</th>
+      </tr>
+    </thead>
+    <tbody class="table-values">
+    </tbody>
+  </table>
 
-  <div class="forms">
-    <form action="">
-      <div class="form">
-        <label for="" class="form-label">Sabor:</label>
-        <input type="text" id="taste">
-      </div>
-      <div class="form">
-        <label for="" class="form-label">6 pedaços:</label>
-        <input type="text" id="six-parts">
-      </div>
-      <div class="form">
-        <label for="" class="form-label">8 pedaços:</label>
-        <input type="text" id="eight-parts">
-      </div>
-      <div class="form">
-        <label for="" class="form-label">Dias Validos:</label>
-        <input type="text" id="valid-days">
-      </div>
-      <button id="submit">Submit</button>
-    </form>
-  </div>
-  <script>
-       var btnvar1 = document.getElementById('btnh1');
+  <form>
+    <div class="form-group">
+      <label for="taste-type">Pizza</label>
+      <input class="form-control taste-type" type="text">
+    </div>
+    <div class="form-group">
+      <label for="value-type">Valor</label>
+      <input class="form-control value-type" type="text">
+    </div>
+    <div class="form-group">
+      <label for="Ingredients-type">Ingredientes</label>
+      <input class="form-control ingredients-type" type="text">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> 
 
-       function Toggle1(){
-                if (btnvar1.style.color =="red") {
-                    btnvar1.style.color = "black"
-                }
-                else{
-                    btnvar1.style.color = "red"
-                }
-       }
-      </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>
